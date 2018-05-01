@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="..\static\js\jquery-3.3.1.min.js">
+	</script>
+	<script>
+		$(function(){
+			$('.t1').css('background','grey');
+			$('#key th').css('color','red');
+			$('#key').css('background','pink');
+			$('#key1').css('background','skyblue');
+		
+			$('body').prepend($('<div/>',
+				{text:'Hide key',
+				css:{color:'blue', cursor:'pointer'},
+				click:function(){	
+			
+
+			if ($('#key:visible').length==1){
+				$('#key').fadeOut('slow')
+				$(this).text('Show Key');
+			}else{
+				$('#key').fadeOut('slow')
+				$(this).text('Hide Key');
+			}}}));
+
+			$('table td:not(:empty)').mouseover(function(){
+				$(this).css('background','blue');	
+			});			
+
+			$('table td').mouseout(function(){
+				$(this).css('background','inherit')			
+			});
+		
+		});
+	</script>
+</head>
+<body>
+			<table id='key' border="1">
+				<caption>Schedule</caption>
+				<tr class="t1">
+					<td></td>
+					<td>9:00</td>
+					<td>10:00</td>
+					<td>11:00</td>
+					<td>12:00</td>
+					<td>13:00</td>
+					<td>14:00</td>
+					<td>15:00</td>
+					<td>16:00</td>
+				</tr>
+			<tr>
+				<td>Mon</td>
+				<td colspan="2">INFO7105 ISO</td>
+				<td class="t2" colspan="2">IMDO7103 HCI</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>SET07012SD</td>
+			</tr>
+			<tr>
+				<td>Tue</td>
+				<td></td>
+				<td colspan="2">SET07102SD A17</td>
+				<td></td>
+				<td></td>
+				<td colspan="2">IMD07103HCI JKCC05</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Wed</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Thu</td>
+				<td></td>
+				<td colspan="2">IMD07103HCI A17</td>
+				<td>IMD07105ISO A17</td>
+				<td></td>
+				<td colspan="2">IMD07103HCI JKCC05</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Fri</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>SET07102SD A17</td>
+				<td>SET07102SD A17</td>
+				<td></td>
+				<td></td>
+				<td></td>
+
+
+			</tr>
+				
+			</table>
+
+			<table id='key1' border="1">
+				<caption>Key</caption>
+				<tr><th>HCI</th><td>Human Computer Interaction</td></tr>
+				<tr><th>ISO</th><td>Information Systems in Organisation</td></tr>
+				<tr><th>SD</th><td>Software Department</td></tr>
+			</table>
+
+</body>
+</html>
